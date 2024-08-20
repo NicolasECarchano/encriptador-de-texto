@@ -1,67 +1,43 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
+
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Encriptador</title>
-    <link rel="stylesheet" href="./style.css" />
+    <title>Document</title>
 </head>
 
 <body>
-    <header></header>
+    <header>
+        <a href="a">
+            <img src="./assets/logo.svg" alt="Logo de Alura" class="logo">
+        </a>
+    </header>
 
     <main>
-    <div class="container">
-        <div class="encriptar">
-        <textarea
-            name="texto"
-            class="texto"
-            id="texto"
-            cols="30"
-            rows="10"
-            placeholder="Ingresa el texto aquí"
-        >
-        </textarea>
+        <section class="encriptador">
+            <textarea class="encriptar" placeholder="Ingrese el texto aquí"></textarea>
+            <div class="encriptador-aviso">
+                <p class="aviso"> Sólo letras minúsculas y sin acento</p>
+            </div>
 
-        <div class="terminos">
-            <p>Sólo letras minúsculas y sin acentos</p>
-        </div>
+            <div class="encriptador-contenedor">
+                <button type="submit" class="btn-encriptar">Encriptar</button>
+                <button type="submit" class="bnt-desencriptar">Desencriptar</button>
+            </div>
+        </section>
 
-        <div class="botones">
-            <button class="btn-encriptar" type="button" onclick="encriptar()">
-            Encriptar
-            </button>
-            <button
-            class="btn-desencriptar"
-            type="button"
-            onclick="desencriptar()"
-            >
-            Desencriptar
-            </button>
-        </div>
-        </div>
+        <section class="tarjeta">
+            <div class="tarjeta-contenedor">
+                <img src="./assets/muneco.svg" alt="Dibujo de persona" class="img-muneco">
+                <p class="textoDeAvisoUno">Ningún mensaje fue encontrado</p>
+                <p class="textoDeAvisoDos">Ingrese el texto que desea encriptar o desencriptar</p>
+            </div>
 
-        <div class="encripdato">
-        <img src="" alt="" id="muneco" />
-        <div class="mensaje-encriptado" id="mensaje-encriptado">
-            <h2 id="titulo-mensaje">Ningún mensaje encontrado</h2>
-            <p id="parrafo">
-            Ingresa el texto que deseas encriptar o desencriptar
-            </p>
-            <textarea
-            name="mensaje"
-            class="mensaje"
-            id="texto"
-            cols="30"
-            rows="10"
-            ></textarea>
-        </div>
-        </div>
-    </div>
+            <textarea name="mensaje" class="evaluar" readonly></textarea>
+            <button type="submit" class="btn-copiar">Copiar</button>
+        </section>
     </main>
-
-    <footer></footer>
-
-    <script src="app.js"></script>
 </body>
+
 </html>
