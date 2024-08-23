@@ -1,43 +1,50 @@
-<!DOCTYPE html>
-<html lang="en">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Encriptador de Texto</title>
 
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+<link rel="stylesheet" href="./style.css">
 </head>
 
 <body>
-    <header>
-        <a href="a">
-            <img src="./assets/logo.svg" alt="Logo de Alura" class="logo">
-        </a>
+    <header class="logo">
+        <img src="./assets/logo.svg" alt="logo" id="logo">
     </header>
 
-    <main>
-        <section class="encriptador">
-            <textarea class="encriptar" placeholder="Ingrese el texto aquí"></textarea>
-            <div class="encriptador-aviso">
-                <p class="aviso"> Sólo letras minúsculas y sin acento</p>
+    <main class="contenido">
+        <section class="contenido__cajaUno">
+            <input class="contenido__cajaUno__ingresarTexto" type="text" name="input-texto" id="input-texto"
+                placeholder="Ingrese el texto aquí">
+            <div class="imagenAlerta">
+                <img src="./assets/aviso.svg" alt="importante" id="imgInfo">
+                <label class="contenido__cajaUno__aviso" for="input-texto">Solo letras minúsculas y sin acentos</label>
             </div>
-
-            <div class="encriptador-contenedor">
-                <button type="submit" class="btn-encriptar">Encriptar</button>
-                <button type="submit" class="bnt-desencriptar">Desencriptar</button>
+            <div id="botones">
+                <input class="contenido__caja1__btn1" type="button" value="Encriptar" id="btn-encriptar">
+                <input class="contenido__caja1__btn2" type="button" value="Desencriptar" id="btn-desencriptar">
             </div>
+            </form>
         </section>
 
-        <section class="tarjeta">
-            <div class="tarjeta-contenedor">
-                <img src="./assets/muneco.svg" alt="Dibujo de persona" class="img-muneco">
-                <p class="textoDeAvisoUno">Ningún mensaje fue encontrado</p>
-                <p class="textoDeAvisoDos">Ingrese el texto que desea encriptar o desencriptar</p>
+
+        <section class="contenido__cajaDos">
+
+            <div class="contenido__cajaDos__imagenMuneco">
+                <img src="./assets/muneco.svg" id="imagen" class="img">
+                <p class="contenido__cajaDos__texto1"><strong>Ningún mensaje fue encontrado</strong></p>
+                <p class="contenido__cajaDos__texto2">Ingrese el texto que deseas encriptar o desencriptar</p>
+            </div>
+            <div class="contenido__cajaDos__botonCopiar">
+                <input class="text-input-salida" type="text" id="msg">
+                <input class="contenido__cajaDos__btn3" type="button" value="Copiar" id="btn-copy">
             </div>
 
-            <textarea name="mensaje" class="evaluar" readonly></textarea>
-            <button type="submit" class="btn-copiar">Copiar</button>
         </section>
     </main>
+
+    <footer>
+
+    </footer>
+    <script src="./app.js"></script>
 </body>
 
 </html>
