@@ -1,4 +1,4 @@
-//Funcion mostrar resultado
+
 function resultado() {
     var inputText = document.querySelector("#input-texto").value;
     if (inputText === "") {
@@ -12,7 +12,7 @@ function resultado() {
 
 
 }
-/**Función para quitar la imagen **/
+
 function quitarImagen() {
     document.getElementById("divImagen").style.display = "none";
 
@@ -24,11 +24,11 @@ function encriptar() {
     const caracteres = /[A-Z0-9~!@#$%&*()_+|{}[\]\\\/?><^:"`;.,áéíóúàèìòù']/g;
     var texto = document.querySelector("#input-texto").value;
     if (texto == "") {
-        alert("Lo siento, pero no debe estar vacío.");
+        alert("Por favor, ingrese un texto para encriptar.");
 
 
     } else if (texto.match(caracteres) != texto.match(caracteres)) {
-        alert("El texto no puede contener Mayusculas ni acentos por favor ni caracteres especiales.");
+        alert("El texto no puede contener mayuscúlas,acentos o caracteres especiales.");
     } else {
 
         var textoCifrado = texto.replace(/e/gi, "enter").replace(/i/gi, "imes").replace(/a/gi, "ai").replace(/o/gi, "ober").replace(/u/gi, "ufat");
@@ -65,23 +65,21 @@ var boton2 = document.querySelector("#btn-desencriptar");
 boton2.onclick = desencriptar;
 
 
-/*COPIAR TEXTO */
 
 function copiarTexto() {
-    //Obtenemos el campo de texto.
+    
     var copiar = document.getElementById("msg");
-    //Selecionamos el campo de texto.
+    
     copiar.select();
-    copiar.setSelectionRange(0, 99999); //Rango para moviles.
-    //Copia aquello que se encuentra dentro del campo de texto.
+    copiar.setSelectionRange(0, 99999); 
     navigator.clipboard.writeText(copiar.value);
 
-    //Alerta de validación de la copia del texto.
+    
     alert("Se copio el texto:  " + copiar.value);
     console.log(alert);
 }
 
-// Asignación del boton copiar 
+
 var botonCopiar = document.querySelector("#btn-copy");
-// Acción al dar un clic al boton copiar con la función copiar. 
+
 botonCopiar.onclick = copiarTexto;
