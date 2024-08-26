@@ -7,18 +7,18 @@
 
 <body>
     <header class="logo">
-        <img src="./assets/logo.svg" alt="logo" id="logo">
+        <img class="logo__imagen" src="./assets/logo.svg" alt="logo" id="logo">
     </header>
 
     <main class="contenido">
         <section class="contenido__cajaUno">
             <input class="contenido__cajaUno__ingresarTexto" type="text" name="input-texto" id="input-texto"
                 placeholder="Ingrese el texto aquí">
-            <div class="imagenAlerta">
+            <div class="alerta">
                 <img src="./assets/aviso.svg" alt="importante" id="imgInfo">
                 <label class="contenido__cajaUno__aviso" for="input-texto">Solo letras minúsculas y sin acentos</label>
             </div>
-            <div id="botones">
+            <div class="btn" id="botones">
                 <input class="contenido__caja1__btn1" type="button" value="Encriptar" id="btn-encriptar">
                 <input class="contenido__caja1__btn2" type="button" value="Desencriptar" id="btn-desencriptar">
             </div>
@@ -26,19 +26,23 @@
         </section>
 
 
-        <section class="contenido__cajaDos">
+        <section class="msg-box" id="cajaR">
+            <h2 id=""></h2>
 
-            <div class="contenido__cajaDos__imagenMuneco">
-                <img src="./assets/muneco.svg" id="imagen" class="img">
-                <p class="contenido__cajaDos__texto1"><strong>Ningún mensaje fue encontrado</strong></p>
-                <p class="contenido__cajaDos__texto2">Ingrese el texto que deseas encriptar o desencriptar</p>
+            <div id="divImagen">
+                <picture>
+                    <img src="./assets/muneco.svg" id="imagen" class="img">
+                </picture>
+                <p class="texto1"><strong>Ningún mensaje fue encontrado</strong></p>
+                <p class="texto2">Ingrese el texto que deseas encriptar o desencriptar</p>
             </div>
-            <div class="contenido__cajaDos__botonCopiar">
+            <div id="botonCopiar">
                 <input class="text-input-salida" type="text" id="msg">
-                <input class="contenido__cajaDos__btn3" type="button" value="Copiar" id="btn-copy">
+                <input class="btn3" type="button" value="Copiar" id="btn-copy">
             </div>
 
         </section>
+
     </main>
 
     <footer>
